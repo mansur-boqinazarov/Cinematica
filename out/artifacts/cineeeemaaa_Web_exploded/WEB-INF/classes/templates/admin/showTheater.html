@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Theaters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/admin/showTheater.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Show Theaters</h1>
+    </div>
+    <ul>
+        <li th:each="theater : ${theaters}">
+            <p th:text="'Theater Name: ' + ${theater.name}">Theater Name</p>
+            <p th:text="'Location: ' + ${theater.location}">Location</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

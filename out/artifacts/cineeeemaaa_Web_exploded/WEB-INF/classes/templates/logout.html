@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Cinematica</title>
+    <link rel="icon" href="/static/img/backround.jpg" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/user/logout.css">
+</head>
+<body>
+<div class="logout-container">
+    <div class="logout-content">
+        <h2>Are you sure you want to logout?</h2>
+        <form id="logoutForm" action="/perform-logout" method="POST">
+            <button type="submit" class="btn btn-yes">Yes</button>
+        </form>
+        <form id="backToHome" action="/static/" method="GET">
+            <button type="submit" class="btn btn-no">No</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

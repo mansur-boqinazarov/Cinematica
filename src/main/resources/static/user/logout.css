@@ -1,0 +1,63 @@
+/* logout.css */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logout-container {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.logout-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logout-content .btn {
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-yes {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-yes:hover {
+    background-color: #c82333;
+}
+
+.btn-no {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-no:hover {
+    background-color: #5a6268;
+}
+
+form {
+    display: inline-block;
+}

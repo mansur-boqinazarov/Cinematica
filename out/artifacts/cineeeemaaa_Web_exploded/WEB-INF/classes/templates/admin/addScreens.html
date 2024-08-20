@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Entry</title>
+    <link rel="stylesheet" href="/static/admin/addScreens.css">
+
+</head>
+<body>
+<div class="container">
+    <h1>Create New Screen</h1>
+    <form action="/admin/addScreen" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+        <label for="theater">Select Theater</label>
+        <select id="theater" name="theaterId" required>
+            <option value="">Select a theater</option>
+            <th:block th:each="entry : ${theaterMap}">
+                <option th:value="${entry.key}" th:text="${entry.value}"></option>
+            </th:block>
+        </select>
+
+        <label for="capacity">Capacity</label>
+        <input type="number" id="capacity" name="capacity" placeholder="Enter capacity" required>
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+</body>
+</html>

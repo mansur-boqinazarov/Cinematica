@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Description</title>
+    <link rel="stylesheet" href="/static/admin/moviesDetails.css">
+
+</head>
+<body th:style="'background: url(' + @{/static/img/{filename}(filename=${movie.posterImage})} + ') no-repeat center center fixed; background-size: cover;'">
+<div class="container">
+    <h1>Movie Description</h1>
+    <p th:text="${movie.description}">Movie description will be here</p>
+    <a href="/admin/showMovies">Back to Movies List</a>
+</div>
+</body>
+</html>

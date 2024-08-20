@@ -1,0 +1,154 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body style */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Container styling */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 15px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Add some hover effect on form fields */
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+    border-color: #888;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+}
+
+/* Additional enhancements */
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="file"]:hover {
+    border-color: #888;
+}
+
+/* Custom scrollbar for textarea */
+textarea {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+    overflow-y: auto;
+}
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

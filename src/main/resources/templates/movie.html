@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+    <link rel="stylesheet" href="/static/user/movie.css">
+</head>
+<body>
+<div class="container">
+    <h1>Available Movies</h1>
+    <div class="movies-grid">
+        <div th:each="movie : ${availableMovies}" class="movie-card animate__animated animate__fadeInUp">
+            <a th:href="@{/movies/details/{id}(id=${movie.id})}">
+                <div class="movie-img-wrapper">
+                    <img th:src="@{/static/img/{filename}(filename=${movie.posterImage})}" th:alt="${movie.title}" />
+                </div>
+                <div class="movie-info">
+                    <h3 th:text="${movie.title}">Movie Title</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

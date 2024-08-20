@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uz" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematica</title>
+    <link rel="icon" href="/img/stark.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/static/user/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <form action="/static">
+            <div class="logo">
+                <button>BU YERDA KINO</button>
+            </div>
+        </form>
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-item"><a href="/movies" class="navbar-link">Kinolar</a></li>
+                <li class="navbar-item" th:if="${username != null}">
+                    <a th:href="${role == 'ADMIN' ? '/admin/profile' : '/user/profile'}" class="navbar-link">Profil</a>
+                </li>
+                <li class="navbar-item" th:if="${role == 'ADMIN'}">
+                    <a href="/admin" class="navbar-link">Admin</a>
+                </li>
+                <li class="navbar-item" th:if="${username != null}">
+                    <a href="/logout" class="navbar-link">Chiqish</a>
+                </li>
+
+                <li class="navbar-item" th:if="${username == null}">
+                    <a href="/login" class="navbar-link">Kirish</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2 class="animate__animated animate__fadeInDown">Cinematica Bilan Tanishing</h2>
+            <p class="animate__animated animate__fadeInUp">Sizning kino uchun mukammal manzilingiz</p>
+            <a href="/movies" class="btn animate__animated animate__zoomIn">Hozir Kiring</a>
+        </div>
+    </div>
+</section>
+
+<div class="container movie-container">
+    <div class="movies-grid">
+        <div th:each="movie : ${availableMovies}" class="movie-card animate__animated animate__fadeInUp">
+            <a th:href="@{/movies/details/{id}(id=${movie.id})}">
+                <div class="movie-img-wrapper">
+                    <img th:src="@{/static/img/{filename}(filename=${movie.posterImage})}" th:alt="${movie.title}" />
+                </div>
+                <div class="movie-info">
+                    <h3 th:text="${movie.title}">Kino Nomi</h3>
+                </div>
+            </a>
+        </div>
+        <div th:each="movie : ${unavailableMovies}" class="movie-card unavailable animate__animated animate__fadeInUp">
+            <a th:href="@{/movies/details/{id}(id=${movie.id})}">
+                <div class="movie-img-wrapper">
+                    <img th:src="@{/static/img/{filename}(filename=${movie.posterImage})}" th:alt="${movie.title}" />
+                </div>
+                <div class="movie-info">
+                    <h3 th:text="${movie.title}">Kino Nomi</h3>
+                    <p class="unavailable-text">Tez Orada</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Cinematica. Barcha huquqlar himoyalangan.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+</script>
+</body>
+</html>

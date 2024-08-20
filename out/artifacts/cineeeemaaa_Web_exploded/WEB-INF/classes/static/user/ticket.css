@@ -1,0 +1,89 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ticket-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ticket-header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ticket-header p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.container {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.container p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.qr-code {
+    margin-top: 20px;
+}
+
+.qr-code h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.ticket-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

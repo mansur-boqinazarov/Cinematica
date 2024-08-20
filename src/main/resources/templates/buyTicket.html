@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ticket Confirmation</title>
+    <!-- External Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/user/buyTicket.css">
+</head>
+<body>
+<div class="ticket-container">
+    <div class="ticket-header">
+        <h1>Ticket Confirmation</h1>
+        <p>Thank you for your purchase!</p>
+    </div>
+
+    <div class="ticket-details">
+        <h2>Information:</h2>
+        <p><strong>Name:</strong> <span th:text="${fullname}"></span></p>
+        <p><strong>Movie:</strong> <span th:text="${movieName}"></span></p>
+        <p><strong>Cinema:</strong> <span th:text="${cinemaName}"></span></p>
+        <p><strong>Seats:</strong> <span th:text="${seats}"></span></p>
+        <p><strong>Date:</strong> <span th:text="${currentTime}"></span></p>
+        <p><strong>Price:</strong> <span th:text="${price}"></span></p>
+    </div>
+
+    <div class="qr-code">
+        <h2>QR Code:</h2>
+        <img src="/static/img/qrCode.jpg" alt="QR Code"/>
+    </div>
+
+    <a href="/movies" class="back-button">Back to Movies</a>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.querySelector('.ticket-container');
+        setTimeout(() => {
+            container.style.opacity = '1';
+            container.style.transform = 'translateY(0)';
+        }, 300);
+    });
+</script>
+</body>
+</html>

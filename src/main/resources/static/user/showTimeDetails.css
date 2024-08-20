@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.showtime-detail {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+.showtime-detail h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.showtime-detail p {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.seats-container {
+    margin-top: 30px;
+}
+
+.seats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #e9ecef;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.seat.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+.seat.booked {
+    background-color: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.seat-info {
+    margin-top: 20px;
+}
+
+.seat-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#selectedSeatsDisplay {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+#totalPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.card-info label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card-info input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+}

@@ -1,0 +1,90 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.ticket-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ticket-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket-header h1 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.ticket-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.ticket-details {
+    margin-bottom: 20px;
+}
+
+.ticket-details h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ticket-details p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.ticket-details strong {
+    color: #007bff;
+}
+
+.qr-code {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.qr-code h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.qr-code img {
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+    display: block;
+    max-width: 200px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

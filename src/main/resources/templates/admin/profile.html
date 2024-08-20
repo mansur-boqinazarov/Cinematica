@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/admin/profile.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="profile-card" data-aos="zoom-in">
+        <div class="profile-header">
+            <h1>Admin Profile</h1>
+            <p><strong>Full Name:</strong> <span th:text="${user.fullName}"></span></p>
+            <p><strong>Username:</strong> <span th:text="${user.username}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+            <p><strong>Role:</strong> <span th:text="${user.role}"></span></p>
+        </div>
+
+        <h2>Tickets</h2>
+        <!-- Include the shared ticket display component here -->
+        <table class="table table-hover" data-aos="zoom-in">
+            <thead>
+            </thead>
+            <tbody>
+            <tr th:each="ticket : ${userTickets}">
+                <td colspan="3">
+                    <a th:href="@{'/admin/ticket/' + ${ticket.id}}" class="ticket-card">
+                        <div><strong>Seat Number:</strong> <span th:text="${ticket.seatNumber}"></span></div>
+                        <div><strong>Time:</strong> <span th:text="${ticket.time}"></span></div>
+                        <div><strong>Price:</strong> <span th:text="${ticket.price}"></span></div>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

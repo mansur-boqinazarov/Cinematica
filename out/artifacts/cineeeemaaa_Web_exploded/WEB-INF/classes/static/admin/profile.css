@@ -1,0 +1,87 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-header h1 {
+    font-size: 2.5em;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.profile-header p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.profile-header p strong {
+    color: #343a40;
+}
+
+/* Table Styling */
+.table {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.ticket-card {
+    display: block;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.ticket-card:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-header h1 {
+        font-size: 2em;
+    }
+
+    .profile-header p {
+        font-size: 1em;
+    }
+
+    .table {
+        margin-top: 15px;
+    }
+
+    .ticket-card {
+        padding: 10px;
+    }
+}

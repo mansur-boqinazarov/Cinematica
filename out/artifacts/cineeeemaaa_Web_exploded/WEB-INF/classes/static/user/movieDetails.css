@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.movie-detail {
+    text-align: center;
+}
+
+.movie-detail h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.movie-detail p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.movie-detail strong {
+    font-weight: 500;
+}
+
+.trailer-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.trailer-link:hover {
+    background-color: #b20710;
+}
+
+.show-sessions {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.show-sessions h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.show-sessions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.show-sessions ul li {
+    margin-bottom: 15px;
+}
+
+.show-sessions ul li a {
+    color: #e50914;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.show-sessions ul li a:hover {
+    color: #b20710;
+}
+
+.show-sessions p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}

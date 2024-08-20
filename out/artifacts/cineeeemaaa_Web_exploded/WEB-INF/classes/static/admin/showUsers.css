@@ -1,0 +1,88 @@
+/* Bosh sahifa font va fon rangini o'rnatadi */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Asosiy konteyner */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sahifadagi asosiy sarlavha */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Jadval dizayni */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Jadval va kataklar uchun chegara */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Jadval katakchalariga uslub berish */
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Jadval sarlavhasi uchun fon rangi */
+th {
+    background-color: #f8f8f8;
+    font-weight: 700;
+}
+
+/* Juft qatorlar uchun fon rangi */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Tugma uslublari */
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Ko'rish tugmasi uchun rang */
+.btn-view {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Bloklash tugmasi uchun rang */
+.btn-block {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Batafsil ma'lumot konteyneri uchun uslub */
+.details-container {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* Batafsil ma'lumotdagi matn uchun uslub */
+.details-container p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
